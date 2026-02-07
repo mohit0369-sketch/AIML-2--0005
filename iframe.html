@@ -1,0 +1,93 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title>Calendar with iframe</title>
+    <style>
+        body {
+            font-family: Arial, sans-serif;
+            display: flex;
+            gap: 20px;
+            padding: 20px;
+        }
+
+        .calendar {
+            width: 300px;
+        }
+
+        .month {
+            text-align: center;
+            font-size: 22px;
+            margin-bottom: 10px;
+        }
+
+        .weekdays,
+        .days {
+            display: flex;
+            flex-wrap: wrap;
+        }
+
+        .weekdays div,
+        .days a {
+            width: calc(100% / 7);
+            text-align: center;
+            padding: 10px 0;
+            box-sizing: border-box;
+        }
+
+        .weekdays div {
+            background-color: #f0f0f0;
+            font-weight: bold;
+        }
+
+        .days a {
+            text-decoration: none;
+            color: #333;
+            border: 1px solid #ddd;
+        }
+
+        .days a:hover {
+            background-color: #2196F3;
+            color: white;
+        }
+
+        iframe {
+            flex: 1;
+            height: 350px;
+            border: 2px solid #333;
+        }
+    </style>
+</head>
+<body>
+
+    <!-- Calendar -->
+    <div class="calendar">
+        <div class="month">January 2026</div>
+
+        <div class="weekdays">
+            <div>Sun</div>
+            <div>Mon</div>
+            <div>Tue</div>
+            <div>Wed</div>
+            <div>Thu</div>
+            <div>Fri</div>
+            <div>Sat</div>
+        </div>
+
+        <div class="days">
+            <div></div>
+            <a href="day1.html" target="content">1</a>
+            <a href="day2.html" target="content">2</a>
+            <a href="day3.html" target="content">3</a>
+            <a href="day4.html" target="content">4</a>
+            <a href="day5.html" target="content">5</a>
+            <a href="day6.html" target="content">6</a>
+            <a href="day7.html" target="content">7</a>
+        </div>
+    </div>
+
+    <!-- iframe -->
+    <iframe name="content" src="welcome.html"></iframe>
+
+</body>
+</html>
