@@ -1,0 +1,126 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <title>Grid Form</title>
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+
+  <style>
+    body {
+      margin: 0;
+      font-family: Arial, sans-serif;
+      background: #eef2f5;
+      display: flex;
+      justify-content: center;
+      align-items: center;
+      min-height: 100vh;
+    }
+
+    .form-container {
+      background: #fff;
+      padding: 30px;
+      border-radius: 12px;
+      max-width: 600px;
+      width: 100%;
+      box-shadow: 0 10px 30px rgba(0,0,0,0.1);
+    }
+
+    h2 {
+      text-align: center;
+      margin-bottom: 25px;
+    }
+
+    form {
+      display: grid;
+      grid-template-columns: 1fr 1fr;
+      gap: 20px;
+    }
+
+    .full-width {
+      grid-column: span 2;
+    }
+
+    label {
+      display: block;
+      margin-bottom: 5px;
+      font-weight: bold;
+    }
+
+    input, textarea, select {
+      width: 100%;
+      padding: 10px;
+      border-radius: 5px;
+      border: 1px solid #ccc;
+      font-size: 14px;
+    }
+
+    textarea {
+      resize: vertical;
+    }
+
+    button {
+      padding: 12px;
+      background: #28a745;
+      color: white;
+      border: none;
+      border-radius: 6px;
+      font-size: 16px;
+      cursor: pointer;
+    }
+
+    button:hover {
+      background: #218838;
+    }
+
+    /* Responsive */
+    @media (max-width: 600px) {
+      form {
+        grid-template-columns: 1fr;
+      }
+
+      .full-width {
+        grid-column: span 1;
+      }
+    }
+  </style>
+</head>
+
+<body>
+
+  <div class="form-container">
+    <h2>Registration Form</h2>
+
+    <form>
+      <div>
+        <label>First Name</label>
+        <input type="text" placeholder="First name">
+      </div>
+
+      <div>
+        <label>Last Name</label>
+        <input type="text" placeholder="Last name">
+      </div>
+
+      <div>
+        <label>Email</label>
+        <input type="email" placeholder="Email address">
+      </div>
+
+      <div>
+        <label>Phone</label>
+        <input type="tel" placeholder="Phone number">
+      </div>
+
+      <div class="full-width">
+        <label>Message</label>
+        <textarea rows="4" placeholder="Your message"></textarea>
+      </div>
+
+      <div class="full-width">
+        <button type="submit">Submit</button>
+      </div>
+    </form>
+  </div>
+
+</body>
+</html>
