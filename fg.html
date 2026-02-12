@@ -1,0 +1,87 @@
+
+<!DOCTYPE html>
+<html>
+<head>
+<title>Simple Nav Menu</title>
+<style>
+body{
+    font-family: Arial;
+}
+ul{
+    list-style: none;
+    padding: 0;
+    background: #333;
+}
+li a{
+    color: white;
+    text-decoration: none;
+    padding: 10px;
+    display: block;
+}
+.block li{
+    display: block;
+}
+.inline li{
+    display: inline;
+}
+.inline-block li{
+    display: inline-block;
+}
+.float li{
+    float: left;
+}
+.float{
+    overflow: auto;
+}
+.box{
+    width: 100px;
+    height: 60px;
+    background: blue;
+    float: left;
+    margin: 5px;
+    color: white;
+    text-align: center;
+    line-height: 60px;
+}
+.clear{
+    clear: both;
+    background: red;
+    color: white;
+    padding: 10px;
+}
+</style>
+</head>
+
+<body>
+
+<h3>Block Menu</h3>
+<ul class="block">
+    <li><a href="#">Home</a></li>
+    <li><a href="#">About</a></li>
+</ul>
+
+<h3>Inline Menu</h3>
+<ul class="inline">
+    <li><a href="#">Home</a></li>
+    <li><a href="#">About</a></li>
+</ul>
+
+<h3>Inline-Block Menu</h3>
+<ul class="inline-block">
+    <li><a href="#">Home</a></li>
+    <li><a href="#">About</a></li>
+</ul>
+
+<h3>Float Menu</h3>
+<ul class="float">
+    <li><a href="#">Home</a></li>
+    <li><a href="#">About</a></li>
+</ul>
+
+<h3>Clear Example</h3>
+<div class="box">Box 1</div>
+<div class="box">Box 2</div>
+<div class="clear">This uses clear: both</div>
+
+</body>
+</html>
